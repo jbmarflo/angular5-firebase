@@ -1,0 +1,530 @@
+
+.main {
+    margin-top:50px;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+*:focus {
+    outline: none;
+}
+button:focus {outline:0;}
+.btn-karma {
+    color:#333;
+}
+.btn-karma:hover {
+    color: #00b3ee;
+    cursor: pointer;
+}
+.radius-border{
+    border-radius: 4px !important;
+}
+/* ------ Nav ------- */
+#header .navbar .navbar-brand{
+    font-weight: bold;
+    font-size: 30px;
+}
+#header .navbar .navbar-nav a{
+    font-weight: bold;
+}
+#header .navbar .first-group li:last-child a{
+    color: #CDCDCD;
+}
+#header .navbar .line-text-nav{
+    line-height: 20px !important;
+}
+/* ------ Home ------- */
+/* Custom container */
+form .search-form{
+    
+}
+.container-full {
+    margin: 0 auto;
+    width: 100%;
+    min-height:100%;
+    background-color:#110022;
+    color:#eee;
+    overflow:hidden;
+}
+.lead {
+    color:#DDCCEE;
+    font-weight: 600;
+
+}
+.container-full a {
+    color:#efefef;
+    text-decoration:none;
+}
+section.banner h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size:40px;
+
+}
+/* banner */
+.banner .container-full{
+    padding: 30px 0;
+}
+.banner .btn-join {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 33px;
+    height: 40px;
+}
+.banner form input{
+    border-bottom-left-radius: 4px !important;
+    border-top-left-radius: 4px !important;
+}
+.banner form button{
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+/* ------ login ------- */
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto !important;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+
+/*Register*/
+.register-container{
+    margin-bottom: 20px;
+}
+.colorgraph {
+    height: 5px;
+    border-top: 0;
+    background: #c4e17f;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+/*Home*/
+.search-title{
+    color: #33A4D5;
+}
+.search{
+    margin-top: 50px;
+}
+.search input {
+    border-bottom-left-radius: 4px !important;
+    border-top-left-radius: 4px !important;
+}
+.search button {
+    border-bottom-right-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+}
+.save-link.content-public-link button svg{
+    display: none;
+}
+.item-course{ border-bottom:1px solid #ddd;}
+
+.btn-blog:hover,
+.btn-blog:focus,
+.btn-blog:active,
+.btn-blog.active,
+.open .dropdown-toggle.btn-blog {
+    color: white;
+    background-color:#34ca78;
+    border-color: #34ca78;
+}
+h2{color:#34ca78;}
+.margin10{margin-bottom:10px; margin-right:10px;}
+.item-course .title{
+    font-weight: 400;
+}
+
+/* Nav bar category*/
+.nav-bar-category{
+    background: #f6f6f6;
+}
+
+.btn-loading{opacity: 0.6; pointer-events: none;}
+
+/*Setting profile*/
+/* Profile container */
+.profile {
+    margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+}
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+/* Nav bar category*/
+.nav-bar-category{
+    background: #f6f6f6;
+}
+.profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+
+.btn-nav {
+    padding: 3px 10px !important;
+    border-radius: 4px !important;
+    margin: 10px 0;
+    line-height: 10px;
+    height: 30px;
+    background: #368CC7;
+}
+.btn-nav:hover {
+    background: #2B80BA;
+}
+
+.btn-join {
+    padding: 3px 10px !important;
+    border-radius: 4px !important;
+    margin: 10px 0;
+    line-height: 10px;
+    height: 30px;
+    background: #41C736;
+}
+
+.btn-join:hover {
+    background: #36AC2C;
+}
+
+/** Footer **/
+footer .navbar{
+    border-top: 1px solid #979797;
+    margin-bottom: 0;
+}
+
+footer p{
+    color: #A9ABAD;
+}
+footer p span{
+    margin: 0 15px;
+}
+footer p svg{
+    color: red;
+}
+
+/** roap **/
+article.roap{
+    margin-top: 15px;
+}
+article.roap .title span{
+    font-size: 12px;
+}
+article.roap .body a{
+    color: black;
+}
+article.roap .body span{
+    color: #777777;
+}
+article.roap .body span:after{
+    content: ' - ';
+}
+.load-box{
+    margin: 100px 0;
+    min-height: 100px;
+}
+/* loader */
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+/* ------------------- Bookmarks----------
+-------------------------------------*/
+section#bookmarks{
+    margin-top: 70px;
+}
+/*Tree*/
+div.treeview {
+    min-width: 100px;
+    min-height: 100px;
+
+    max-height: 256px;
+    overflow:auto;
+
+    padding: 4px;
+
+    margin-bottom: 20px;
+
+    color: #369;
+
+    border: solid 1px;
+    border-radius: 4px;
+}
+div.treeview ul:first-child:before {
+    display: none;
+}
+.treeview, .treeview ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+
+    color: #369;
+}
+.treeview ul {
+    margin-left:1em;
+    position:relative
+}
+.treeview ul ul {
+    margin-left:.5em
+}
+.treeview ul:before {
+    content:"";
+    display:block;
+    width:0;
+    position:absolute;
+    top:0;
+    left:0;
+    border-left:1px solid;
+
+    /* creates a more theme-ready standard for the bootstrap themes */
+    bottom:15px;
+}
+.treeview li {
+    margin:0;
+    padding:0 1em;
+    line-height:2em;
+    font-weight:700;
+    position:relative
+}
+.treeview ul li:before {
+    content:"";
+    display:block;
+    width:10px;
+    height:0;
+    border-top:1px solid;
+    margin-top:-1px;
+    position:absolute;
+    top:1em;
+    left:0
+}
+.tree-indicator {
+    margin-right:5px;
+
+    cursor:pointer;
+}
+.treeview li a {
+    text-decoration: none;
+    color:inherit;
+
+    cursor:pointer;
+}
+.treeview li button, .treeview li button:active, .treeview li button:focus {
+    text-decoration: none;
+    color:inherit;
+    border:none;
+    background:transparent;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    outline: 0;
+}
+@media screen and (max-width: 470px) {
+    .save-link.content-public-link button svg{
+        display: block;
+        margin-top: -5px;
+    }
+
+    .content-public-link button span{
+        display: none;
+    }
+}

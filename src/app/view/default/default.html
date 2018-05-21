@@ -1,0 +1,135 @@
+<section *ngIf="!identity" class="banner">
+    <div class="container-full">
+
+        <div class="row">
+
+            <div class="col-lg-12 text-center v-center">
+
+                <h1>Guarda y comparte tus enlaces</h1>
+
+                <br>
+
+                <form class="col-lg-12 content-public-link save-link" (ngSubmit)="verifyLink(content)">
+                    <div class="search-form input-group input-group-lg col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-sm-12 col-sm-6 col-md-6 col-lg-4">
+                        <input type="text" class="center-block form-control input-lg" title="Guardar un enlace" autofocus placeholder="Guardar un enlace">
+                        <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit"><span>Siguiente</span> <i class="fas fa-2x fa-angle-right"></i></button></span>
+                    </div>
+                </form>
+                <div class="clearfix"></div>
+                <br>
+                <br>
+                <a class="btn btn-join" [routerLink]="['/register']">Únete gratis</a>
+            </div>
+
+        </div> <!-- /row -->
+        <br>
+
+    </div>
+    <!--<div class="col-md-12 item-course">-->
+        <!--<div class="media">-->
+            <!--<div class="media-left">-->
+                <!--<div class="karma-item">-->
+                    <!--<a class="good-karma btn-karma">-->
+                        <!--<i class="fa fa-4x fa-caret-up" aria-hidden="true"></i>-->
+                    <!--</a>-->
+                    <!--<div class="total-karma">-->
+                    <!--<span>-->
+                        <!--<div class="text-center"><strong>240</strong></div>-->
+                        <!--<small class="text-center">KARMAS</small>-->
+                    <!--</span>-->
+                    <!--</div>-->
+                    <!--<a class="bad-karma btn-karma">-->
+                        <!--<i class="fa fa-4x fa-caret-down" aria-hidden="true"></i>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="media-body">-->
+                <!--<h3><a href="#" class="title">Iniciando con php</a></h3>-->
+                <!--<a href="#">-->
+                    <!--<img src="http://noticias.universia.es/net/images/ciencia-tecnologia/m/ma/mas/mas-200-cursos-gratis-tecnologia.jpg" width="200px" alt="post img" class="img-rounded pull-left img-responsive thumb margin10">-->
+                <!--</a>-->
+                <!--<em>Por <a href="#">jbmarflo</a> a <strong>Youtube</strong> <span>publicado hace:20 min</span></em>-->
+                <!--<article><p>-->
+                    <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text-->
+                    <!--ever since the 1500s, it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.-->
+                <!--</p></article>-->
+                <!--<a href="#" class="pull-right btn-sm btn btn-primary">Vamos</a>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+</section>
+
+<section class="search">
+    <h2 class="text-center search-title">Entérate la ruta de aprendizaje de otros</h2>
+    <form class="col-lg-12 content-public-link">
+        <div class="col-md-3"></div>
+        <div class="input-group input-group-lg col-md-6 search-form">
+            <input type="text" class="center-block form-control input-lg" title="Ej. Machine learning..." placeholder="Ej. Machine learning...">
+            <span class="input-group-btn"><button class="btn btn-lg btn-danger" type="button"><strong><i class="fas fa-search"></i></strong></button></span>
+        </div>
+        <div class="col-md-3"></div>
+    </form>
+</section>
+<section>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6" *ngIf="roapmapList">
+        <article class="roap" *ngFor="let roapmap of roapmapList.result">
+            <div class="head">
+                <div class="title"><a href="#"><strong>{{ roapmap.name }}</strong></a> <span>By {{ roapmap.author.name }}</span></div>
+            </div>
+            <div class="body">
+                <p>
+                    <span>{{ roapmap.date }}</span>
+                    <a href="#">{{ roapmap.lastContent }}</a>
+                </p>
+            </div>
+        </article>
+
+        <div class="clearfix"></div>
+        <div>
+            <ul class="pagination">
+                <li>
+                    <a [routerLink]="['/index', roapmapList.pagination.prev]" aria-label="Previous">Anterior</a>
+                </li>
+                <li *ngFor="let page of pages">
+                    <a [routerLink]="['/index', page + 1]">{{page + 1}}</a>
+                </li>
+                <li>
+
+                    <a [routerLink]="['/index', roapmapList.pagination.next]" aria-label="Previous">Siguiente</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-6" *ngIf="!roapmapList && !loadingRoadmap">
+        <br><br>
+        <p>No hay los roapmaps que buscas. Vamos! crea tu propio roapmap subiendo tus enlaces, así podrán otros aprender de ti. <a class="btn btn-primary radius-border" href="#">Guardar enlace</a></p>
+        <br><br>
+    </div>
+    <div class="col-sm-6 load-box" *ngIf="loadingRoadmap">
+        <div class="loader"></div>
+    </div>
+    <div class="col-sm-3"></div>
+    <div class="clearfix"></div>
+    <div>
+        <!--<ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>-->
+    </div>
+</section>
+
+
+
+<!--<ng-template #content let-c="close" let-d="dismiss">-->
+    <!--<div class="modal-header">-->
+        <!--<h4 class="modal-title">Modal title</h4>-->
+        <!--<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">-->
+            <!--<span aria-hidden="true">&times;</span>-->
+        <!--</button>-->
+    <!--</div>-->
+    <!--<div class="modal-body">-->
+        <!--<p>One fine body&hellip;</p>-->
+    <!--</div>-->
+    <!--<div class="modal-footer">-->
+        <!--<button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>-->
+    <!--</div>-->
+<!--</ng-template>-->

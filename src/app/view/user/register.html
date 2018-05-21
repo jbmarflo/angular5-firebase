@@ -1,0 +1,101 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <form role="form" #registerForm="ngForm" (ngSubmit)="onSubmit()">
+                <h2>{{title}} <small>{{subtitle}}</small></h2>
+                <hr class="colorgraph">
+
+                <div class="user-identity alert alert-success text-center" *ngIf="status == true">
+                    Bien!, acuerdate que compartir es agradecer.
+                </div>
+
+                <div class="user-identity alert alert-danger text-center" *ngIf="status == false">
+                    {{errorMessage}}
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group controls">
+                            <input type="text" ngControl="name" [(ngModel)]="user.name" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1" required>
+                            <span class="help-inline text-danger" *ngIf="!name.valid && name.touched">El nombre es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="surname" id="surname" ngControl="surname" [(ngModel)]="user.surname" class="form-control input-lg" placeholder="Last Name" tabindex="2" required>
+                            <span class="help-inline text-danger" *ngIf="!surname.valid && surname.touched">El apellido es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="username" id="username" ngControl="username" [(ngModel)]="user.username" class="form-control input-lg" placeholder="Username" tabindex="3" required>
+                            <span class="help-inline text-danger" *ngIf="!username.valid && username.touched">El username es obligatorio</span>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" ngControl="email" [(ngModel)]="user.email" class="form-control input-lg" placeholder="Email" tabindex="4" required>
+                            <span class="help-inline text-danger" *ngIf="!email.valid && email.touched">El email es obligatorio</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <input type="password" minlength="6" name="password" id="password" ngControl="password" [(ngModel)]="user.password" class="form-control input-lg" placeholder="Password" tabindex="5" required>
+                            <span class="help-inline text-danger" *ngIf="!password.valid && password.touched">La contraseña es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-3">
+					<span class="button-checkbox">
+						<!--<button type="button" class="btn" data-color="info" (click)="agreeRegister()" tabindex="7">I Agree</button>-->
+                        <!--<input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">-->
+                            <label>
+                                <input type="checkbox" class="form-control" autocomplete="off"  name="agree_register" ngControl="agree_register" required> De acuerdo
+                            </label>
+                        <span class="help-inline text-danger" *ngIf="!agree_register.valid && agree_register.touched">Debes Aceptar los términos y condiciones</span>
+					</span>
+                    </div>
+                    <div class="col-xs-8 col-sm-9 col-md-9">
+                        Haciendo click en <strong class="label label-primary">Registrar</strong>, estas de acuerdo con los <a href="#" data-toggle="modal" data-target="#t_and_c_m">Términos y condiciones</a> de este sitio, incluyendo el uso de cookies.
+                    </div>
+                </div>
+
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12"><input type="submit" value="{{button}}" [ngClass]="{'btn-loading':loading}" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+                    <div class="clearfix"></div>
+                    <p class="text-center"><br><a [routerLink]="['/login']">Iniciar sesión</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">Términos y condiciones</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Condiciones de uso</h4>
+                    <ol>
+                        <li>Debes colocar contenidos solo educativos, como videos o temas de páginas que les  hayan servido.</li>
+                        <li>El usuario se abstendrá a crear múltiples cuentas con el fin de promocionar sitios webs, participar en discusiones simulado, suplantar identidad o intentar alterar artificalmente los contadores o puntos de votos y karmas.s</li>
+                        <li>No faltará el respeto a ningún usuario, es una comunidad de educación donde todos aportarán.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button  class="btn btn-primary" data-dismiss="modal">De acuerdo</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>

@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="productService.selectedProduct.name" placeholder="Agregar nombre producto">
+        <input type="text" class="form-control" name="category" #name="ngModel" [(ngModel)]="productService.selectedProduct.category" placeholder="Agregar nombre categoria">
+        <input type="text" class="form-control" name="location" #name="ngModel" [(ngModel)]="productService.selectedProduct.location" placeholder="Agregar nombre locacion">
+        <input type="text" class="form-control" name="price" #name="ngModel" [(ngModel)]="productService.selectedProduct.price" placeholder="Agregar nombre precio">
+      </div>
+    </form>
+  </div>
+</div>
